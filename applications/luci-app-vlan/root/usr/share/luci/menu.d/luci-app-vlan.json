@@ -1,0 +1,40 @@
+{
+	"admin/services/vlan": {
+		"title": "VLan",
+		"order": 30,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [ "luci-app-vlan" ],
+			"uci": { "vlan": true }
+		}
+	},
+
+	"admin/services/vlan/config": {
+		"title": "Configuration",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "vlan/config"
+		}
+	},
+
+	"admin/services/vlan/files": {
+		"title": "Files",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "vlan/files"
+		}
+	},
+
+	"admin/services/vlan/log": {
+		"title": "Log",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "vlan/log"
+		}
+	}
+}
